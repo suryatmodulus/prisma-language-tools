@@ -10,6 +10,7 @@ on:
         - '!renovate/**'
       paths-ignore:
         - '.github/**'
+    workflow_dispatch:
 
 env:
   GH_TOKEN: ${{ secrets.GH_TOKEN }}
