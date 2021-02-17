@@ -64,6 +64,7 @@ const plugin: PrismaVSCodePlugin = {
       watcher = chokidar.watch(
         path.join(rootPath, '**/node_modules/.prisma/client/index.d.ts'),
         {
+          ignored: /(^|[\/\\])\../, // ignore dotfiles
           usePolling: false,
           followSymlinks: false,
         },
